@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo nmap -sn $1
+source ntlib
+sudo nmap -sn ${NET} | perl -pe 's/(Nmap)/\n$1/' | hili

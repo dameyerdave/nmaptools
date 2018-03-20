@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source ntlib
+sudo nmap -p $1 ${NET} --open | iplist
